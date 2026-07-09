@@ -3,8 +3,14 @@
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width,initial-scale=1">
-  <title>MSG — Mnemonic State Graph</title>
-  <link rel="canonical" href="/papers/msg.html">
+  <title>Mnemonic State Graph (MSG): Deterministic AI Memory Architecture</title>
+  <meta name="description" content="A structural deep-dive into Mnemonic State Graph (MSG), an experimental graph-based architecture designed to solve state tracking and long-context drift in AI agents.">
+  <link rel="canonical" href="https://agnel.machfold.in/papers/msg.html">
+  <meta property="og:title" content="Mnemonic State Graph (MSG): AI Memory Architecture">
+  <meta property="og:description" content="An experimental graph-based architecture for state tracking, selective forgetting, and durable agent memory.">
+  <meta property="og:type" content="article">
+  <meta property="og:url" content="https://agnel.machfold.in/papers/msg.html">
+  <script type="application/ld+json">{"@context":"https://schema.org","@type":"ScholarlyArticle","headline":"Mnemonic State Graph: Graph-Based AI Memory Architecture","description":"An exploration of deterministic memory layers to prevent context drift in autonomous models.","author":{"@type":"Person","name":"Agnel Suresh","url":"https://agnel.machfold.in/"},"datePublished":"2026-04-15","inLanguage":"en-IN","publisher":{"@type":"Organization","name":"Machfold Ventures","url":"https://machfold.in"}}</script>
   <script>
   window.MathJax = {tex:{inlineMath:[['\\(','\\)'],['$','$']],displayMath:[['\\[','\\]'],['$$','$$']],processEscapes:true},options:{skipHtmlTags:['script','noscript','style','textarea','pre']},svg:{fontCache:'global'}};
   </script>
@@ -29,7 +35,7 @@
 </head>
 <body>
   <a class="back-link" href="/">← back</a>
-  <main id="content"><h1>Loading…</h1></main>
+  <main><article id="content" class="paper-article"><h1>Loading…</h1></article></main>
   <script>
   // Minimal markdown -> HTML used on index; preserves math tokens
   function escapeHTML(str){return String(str||'').replace(/[&<>"]+/g,ch=>({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;'}[ch]||ch));}
@@ -59,9 +65,10 @@
       const res=await fetch('msg-memory-architecture.md');
       if(!res.ok)throw new Error('not found');
       const md=await res.text();
+      const articleBody=markdownToHTML(md).replace(/<h1\b/g,'<h2').replace(/<h2\b/g,'<h3').replace(/<h3\b/g,'<h4');
       document.getElementById('content').innerHTML=`<h1>MSG — Mnemonic State Graph</h1>
         <div class="vault-note">psst, I'm still working on these, so u guys are the first to get a sneak peek. Limited access babyyy.</div>
-        <div class="paper-content">${markdownToHTML(md)}</div>
+        <div class="paper-content">${articleBody}</div>
         <div class="collab-cta"><strong>If you actually understand this math, let's build something.</strong>But let's be real -- you're probably just going to close this tab.</div>
         <div class="modal-links"><a class="zenodo-link" href="https://zenodo.org/records/21252408" target="_blank" rel="noopener">Full paper (Zenodo) -></a></div>
         <div class="citation-box"><button id="copyBib">📋 Copy BibTeX Citation</button></div>`;

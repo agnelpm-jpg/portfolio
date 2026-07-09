@@ -1,5 +1,12 @@
 <!doctype html>
-<html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>ValuScale — Algorithmic Service Pricing</title>
+<html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>ValuScale: Algorithmic Service Pricing for Explainable Systems</title>
+<meta name="description" content="A research note on ValuScale, an explainable pricing framework for services that must remain legible to users and operators alike.">
+<link rel="canonical" href="https://agnel.machfold.in/papers/valuscale.html">
+<meta property="og:title" content="ValuScale: Algorithmic Service Pricing">
+<meta property="og:description" content="An explainable service-pricing framework for transparent, algorithmic value assignment.">
+<meta property="og:type" content="article">
+<meta property="og:url" content="https://agnel.machfold.in/papers/valuscale.html">
+<script type="application/ld+json">{"@context":"https://schema.org","@type":"ScholarlyArticle","headline":"ValuScale: Algorithmic Service Pricing for Explainable Systems","description":"A research note on ValuScale, an explainable pricing framework for services that must remain legible to users and operators alike.","author":{"@type":"Person","name":"Agnel Suresh","url":"https://agnel.machfold.in/"},"datePublished":"2026-04-15","inLanguage":"en-IN","publisher":{"@type":"Organization","name":"Machfold Ventures","url":"https://machfold.in"}}</script>
 <script>window.MathJax={tex:{inlineMath:[['\\(','\\)'],['$','$']],displayMath:[['\\[','\\]'],['$$','$$']],processEscapes:true},options:{skipHtmlTags:['script','noscript','style','textarea','pre']},svg:{fontCache:'global'}};</script>
 <script defer src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-svg.js"></script>
 <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500;600;700&family=Inter:wght@400;500;600&family=JetBrains+Mono:wght@400;500;700&display=swap" rel="stylesheet">
@@ -20,13 +27,13 @@
 </style>
 </head><body>
 <a class="back-link" href="/">← back</a>
-<main id="content"><h1>Loading…</h1></main>
+<main><article id="content" class="paper-article"><h1>Loading…</h1></article></main>
 <script>
 function escapeHTML(str){return String(str||'').replace(/[&<>"]+/g,ch=>({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;'}[ch]||ch));}
 function markdownToHTML(md){const mathBlocks=[];md=md.replace(/\$\$([\s\S]*?)\$\$/g,(m,g)=>{mathBlocks.push('$$'+g+'$$');return`@@MATH${mathBlocks.length-1}@@`;});md=md.replace(/\\\[([\s\S]*?)\\\]/g,(m,g)=>{mathBlocks.push('\\['+g+'\\]');return`@@MATH${mathBlocks.length-1}@@`;});md=md.replace(/\\\(([\s\S]*?)\\\)/g,(m,g)=>{mathBlocks.push('\\('+g+'\\)');return`@@MATH${mathBlocks.length-1}@@`;});md=md.replace(/\$([^\$\n][^\$]*)\$/g,(m,g)=>{mathBlocks.push('$'+g+'$');return`@@MATH${mathBlocks.length-1}@@`;});const lines=md.replace(/\r\n/g,'\n').split('\n');let html='',inList=false,inCode=false,code=[];const flushList=()=>{if(inList){html+='</ul>';inList=false}};const inline=s=>escapeHTML(s).replace(/`([^`]+)`/g,'<code>$1</code>').replace(/\*\*([^*]+)\*\*/g,'<strong>$1</strong>').replace(/\*([^*]+)\*/g,'<em>$1</em>');lines.forEach(line=>{if(line.trim().startsWith('```')){if(inCode){html+=`<pre><code>${escapeHTML(code.join('\n'))}</code></pre>`;code=[];inCode=false;}else{flushList();inCode=true;}return}if(inCode){code.push(line);return}if(/^---\s*$/.test(line)){flushList();html+='<hr>';return}const h=line.match(/^(#{1,3})\s+(.*)$/);if(h){flushList();html+=`<h${h[1].length}>${inline(h[2])}</h${h[1].length}>`;return}const li=line.match(/^\s*[-*]\s+(.*)$/);if(li){if(!inList){html+='<ul>';inList=true}html+=`<li>${inline(li[1])}</li>`;return}if(line.trim()==''){flushList();return}flushList();html+=`<p>${inline(line)}</p>`});flushList();if(inCode)html+=`<pre><code>${escapeHTML(code.join('\n'))}</code></pre>`;html=html.replace(/@@MATH(\d+)@@/g,(_,n)=> mathBlocks[Number(n)]||'');return html}
- (async function(){try{const res=await fetch('../summaries/valuscale.md');if(!res.ok)throw new Error('not found');const md=await res.text();document.getElementById('content').innerHTML=`<h1>ValuScale</h1>
+ (async function(){try{const res=await fetch('../summaries/valuscale.md');if(!res.ok)throw new Error('not found');const md=await res.text();const articleBody=markdownToHTML(md).replace(/<h1\b/g,'<h2').replace(/<h2\b/g,'<h3').replace(/<h3\b/g,'<h4');document.getElementById('content').innerHTML=`<h1>ValuScale</h1>
 	<div class="vault-note">psst, I'm still working on these, so u guys are the first to get a sneak peek. Limited access babyyy.</div>
-	<div class="paper-content">${markdownToHTML(md)}</div>
+	<div class="paper-content">${articleBody}</div>
 	<div class="collab-cta"><strong>If you actually understand this math, let's build something.</strong>But let's be real -- you're probably just going to close this tab.</div>
 	<div class="modal-links"><a href="#">Coming soon -></a></div>
 	<div class="citation-box"><button id="copyBib">📋 Copy BibTeX Citation</button></div>`;if(window.MathJax&&typeof window.MathJax.typesetPromise==='function')window.MathJax.typesetPromise();}catch(e){document.getElementById('content').innerHTML='<h1>Content unavailable</h1><p>Could not load the markdown file.</p>'}})();
