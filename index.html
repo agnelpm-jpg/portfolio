@@ -345,13 +345,13 @@ footer b{color:var(--ember);cursor:pointer;}
 
 <!-- LOADER -->
 <div id="loader">
-  <div class="line" style="animation-delay:.05s">> initializing curiosity<b>...</b></div>
-  <div class="line" style="animation-delay:.25s">> loading caffeine<b>...</b> [critical dependency]</div>
-  <div class="line" style="animation-delay:.45s">> compiling bad decisions<b>...</b></div>
-  <div class="line" style="animation-delay:.65s">> resolving existential dependencies<b>...</b></div>
-  <div class="line" style="animation-delay:.85s">> building neurons<b>...</b></div>
-  <div class="line" style="animation-delay:1.05s">> injecting chaos<b>...</b></div>
-  <div class="line" style="animation-delay:1.25s">> deploying ideas<b>...</b> done.</div>
+  <div class="line" style="animation-delay:.10s">> initializing curiosity<b>...</b></div>
+  <div class="line" style="animation-delay:.35s">> loading caffeine<b>...</b> [critical dependency]</div>
+  <div class="line" style="animation-delay:.65s">> compiling bad decisions<b>...</b></div>
+  <div class="line" style="animation-delay:.85s">> resolving existential dependencies<b>...</b></div>
+  <div class="line" style="animation-delay:1.10s">> building neurons<b>...</b></div>
+  <div class="line" style="animation-delay:1.30s">> injecting chaos<b>...</b></div>
+  <div class="line" style="animation-delay:1.45s">> deploying ideas<b>...</b> done.</div>
   <div class="bar"><span id="loadbar"></span></div>
 </div>
 
@@ -384,20 +384,20 @@ footer b{color:var(--ember);cursor:pointer;}
 <!-- INTRO -->
 <section id="intro">
   <div class="wrap">
-    <div class="eyebrow">00 -- the premise</div>
+    <div class="eyebrow">00 the premise</div>
     <div class="intro-grid">
       <div class="reveal">
         <p>So. You're probably wondering why someone thought <b>building software, publishing physics papers nobody asked for, designing settlement systems for solar panels, studying business, and lifting weights</b> simultaneously was a reasonable life decision.</p>
         <p>Good question. I don't fully know either. What I do know is that I got bored of picking a lane, so I built a highway system instead.</p>
-        <p>I'm <b>Agnel</b> -- I run <b>Machfold Ventures</b>, I write cosmology papers on the side <span class="glitch">(yes, really)</span>, and I treat most of life like a debugging problem: find the assumption that's wrong, isolate it, fix the system, ship it, repeat.</p>
-        <p>This page is not a resume. Resumes are for people with one job title. Scroll on -- it's closer to a tour of the operating system currently running in my head.</p>
+        <p>I'm <b>Agnel</b> I run <b>Machfold Ventures</b>, and I write cosmology papers on the side <span class="glitch">(yes, really)</span>, and I treat most of life like a debugging problem: find the assumption that's wrong, isolate it, fix the system, ship it, repeat.</p>
+        <p>This page is not a resume. Resumes are for people with one job title. Scroll on -- it's closer to a tour of the operating system running in my head.</p>
         <div class="stack-tags">
           <span>first-principles thinking</span><span>systems thinking</span><span>pragmatic absurdism</span><span>controlled chaos</span><span>zero ego, infinite curiosity</span>
         </div>
       </div>
       <figure class="polaroid reveal">
         <img src="assets/my-img.jpeg" alt="Agnel at the desk, 2am, doing something a normal person would not be doing">
-        <figcaption>field photo -- subject observed mid-experiment, motive unclear</figcaption>
+        <figcaption>field photo - subject observed mid-experiment, motive unclear</figcaption>
       </figure>
     </div>
   </div>
@@ -406,9 +406,9 @@ footer b{color:var(--ember);cursor:pointer;}
 <!-- JOURNEY -->
 <section id="journey">
   <div class="wrap">
-    <div class="eyebrow">01 -- the journey</div>
+    <div class="eyebrow">01 the journey</div>
     <h2 class="title">Oh, this escalated quickly.</h2>
-    <p class="lede">Not a resume. A crime scene. Reconstruct the timeline and you'll see exactly where things went sideways -- and why that was, in retrospect, the correct call.</p>
+    <p class="lede">Not a resume. This is a crime scene. Reconstruct the timeline and you'll see exactly where things went sideways, and why that was, in retrospect, the correct call.</p>
     <div class="timeline" id="timeline"></div>
   </div>
 </section>
@@ -463,7 +463,7 @@ footer b{color:var(--ember);cursor:pointer;}
   <div class="wrap">
     <div class="eyebrow">05 -- machfold ventures</div>
     <h2 class="title">"Most agencies sell services.<br>We're engineering businesses."</h2>
-    <p class="lede reveal" style="margin-top:6px;">Machfold started as a digital marketing venture and immediately refused to stay in that box. Today it's a systems company -- software, automation, AI, internal tooling, pricing engines, brand architecture -- all pointed at one objective: <b style="color:var(--ink)">build companies that need less chaos to scale.</b></p>
+    <p class="lede reveal" style="margin-top:6px;">Machfold started as a digital marketing venture and refused to stay in that box. Today it's a systems company - software, automation, AI, internal tooling, pricing engines, brand architecture -- all pointed at one objective: <b style="color:var(--ink)">build companies that need less chaos to scale.</b></p>
     <div class="stack-tags reveal" style="margin-top:26px;">
       <span>Digital Infrastructure</span><span>AI Integrations</span><span>Internal Business Systems</span><span>Brand Architecture</span><span>Process Automation</span><span>ValuScale -- algorithmic pricing engine</span>
     </div>
@@ -500,14 +500,13 @@ footer b{color:var(--ember);cursor:pointer;}
         // status: open to interesting problems<br>
         // response time: depends on how many tabs are open (146, currently)<br>
         // will reply faster if the subject line contains "money" or "incentives"<br>
-        // fallback channel below: no server, just FormSubmit.
-        <form class="contact-form" action="https://formsubmit.co/agnelpm@gmail.com" method="POST">
+        // fallback channel below:
+        <form class="contact-form" action="https://formspree.io/f/xeebbbqd" method="POST">
           <input type="hidden" name="_subject" value="Personal website message">
-          <input type="hidden" name="_captcha" value="false">
           <input type="text" name="name" placeholder="name" required>
           <input type="email" name="email" placeholder="email" required>
           <textarea name="message" placeholder="what are we building / breaking / proving?" required></textarea>
-          <button type="submit">send via fallback -></button>
+          <button type="submit">send via Formspree -></button>
         </form>
       </div>
     </div>
@@ -559,12 +558,12 @@ setTimeout(()=>{document.getElementById('loader').classList.add('hide');},1900);
 const subs=[
   "I write code.",
   "I accidentally founded a company.",
-  "I published a cosmology paper.",
-  "I'm trying to understand the universe. It's not cooperating.",
+  "I'm writing a cosmology paper.",
+  "Still trying to understand the universe.",
   "Coffee was involved.",
   "I should probably sleep.",
   "My browser currently has 146 tabs open.",
-  "The bugs were features until production.",
+  "The bugs are features.",
   "I have a theory for everything. That's usually a bad sign.",
   "Ask me about non-quantized gravity. I dare you."
 ];
@@ -591,13 +590,13 @@ window.addEventListener('scroll',()=>{
 
 /* ================= JOURNEY DATA ================= */
 const journey=[
- {y:'machfold',t:'It started as a business problem',d:'Machfold began as digital marketing, but the work kept pointing upstream: clients did not just need posts, ads, or branding. They needed cleaner systems behind the business.',tag:'origin'},
+ {y:'machfold',t:'It started as a business problem',d:'Machfold began as digital marketing, but the work kept pointing upstream: clients did not just need posts, ads, or branding. They needed cleaner systems behind the work.',tag:'origin'},
  {y:'software',t:'Marketing turned into infrastructure',d:'To make the work repeatable, I started building tools, automations, dashboards, workflows, and internal systems. The agency problem quietly became a software problem.',tag:'first escalation'},
- {y:'systems',t:'Software forced me one layer deeper',d:'Once you build tools, you start seeing everything as architecture: incentives, operations, pricing, memory, governance, even attention. The question became less "what do I make?" and more "what holds the system together?"',tag:'architecture'},
+ {y:'systems',t:'Software forced me one layer deeper',d:'Once you build tools, you start seeing everything as architecture: incentives, operations, pricing, memory, administration, even attention. The question became less "what do I make?" and more "what holds the system together?"',tag:'architecture'},
  {y:'psychology + philosophy',t:'Then the humans became the hard part',d:'Systems fail where human behavior enters them, so psychology and philosophy stopped being side quests. They became debugging tools for motivation, meaning, coordination, and bad assumptions.',tag:'human layer'},
- {y:'cosmology',t:'The same questions got unreasonably large',d:'If business, software, and humans are all systems, the obvious next mistake was asking whether reality itself has load-bearing assumptions nobody is questioning hard enough.',tag:'scale problem'},
- {y:'research vault',t:'Papers started happening before permission arrived',d:'MSG, MET, UQCIT, distributed solar governance, and ValuScale are all snapshots from that same trail: follow the weird assumption until it either collapses or becomes useful.',tag:'raw files'},
- {y:'right now',t:'Still building the operating system',d:'Machfold keeps pulling the practical thread. The research keeps pulling the theoretical one. Somewhere between them is the actual work: build systems that make chaos slightly less expensive.',tag:'ongoing'},
+ {y:'cosmology',t:'The philosophical questions got unreasonably large',d:'If business, software, and humans are all systems, the obvious next mistake was asking whether reality itself has load-bearing assumptions nobody is questioning hard enough.',tag:'scale problem'},
+ {y:'research vault',t:'Papers piling up, Time running out',d:'MSG, MET, UQCIT, distributed solar governance, and ValuScale are all snapshots from that same trail: follow the weird assumption until it either collapses or becomes useful.',tag:'raw files'},
+ {y:'right now',t:'Still building the operating system',d:'Machfold pulling the practical thread. The research keeps pulling the theoretical one. Somewhere between them is the actual work: build systems that make chaos slightly less expensive.',tag:'ongoing'},
 ];
 const tlEl=document.getElementById('timeline');
 journey.forEach(j=>{
@@ -685,7 +684,7 @@ const FOLDER_SVG = `<svg width="40" height="28" viewBox="0 0 24 16" fill="none" 
 const projects={
   github:{icon:FOLDER_SVG,name:'GitHub',sub:'where the commits happen',desc:'The actual code. Some of it is production-grade. Some of it is 3am-and-it-somehow-worked grade. Both are represented honestly.',stack:'Python  -  Node  -  Docker  -  APIs  -  assorted chaos',reason:'Publishing is part of the process, not a victory lap after it.',lessons:'',image:'assets/no-plan-b.jpg',imageFit:'contain',links:[{l:'Visit GitHub',u:'https://github.com/agnelpm-jpg'}]},
   worked:{icon:FOLDER_SVG,name:'Things That Somehow Worked',sub:'Task failed successfully.',quote:'Every engineer has that one folder they\'re afraid to delete because they have absolutely no idea why it works.',desc:'Not every project begins with a roadmap. Some begin with caffeine, a terrible idea at 2 a.m., and an unreasonable amount of confidence. Surprisingly, a few of them survived. This folder is dedicated to experiments that somehow escaped the "I\'ll finish this later" graveyard and evolved into real software, research, clients, or businesses.',bullets:['Publishing my first AI research paper before having a proper research background.','Accidentally building a company while trying to learn marketing.','Convincing clients to trust systems that did not exist until a week before the meeting.','Turning random shower thoughts into whitepapers.','Discovering that "I\'ll just prototype it" is apparently how I start companies.'],image:'assets/we-are-so-back.jpg',imageFit:'contain',poem:true,links:[]},
-  shouldnt:{icon:FOLDER_SVG,name:'Things That Definitely Shouldn\'t Have Worked',sub:'If this section gets audited, I\'m pleading the Fifth.',quote:'Every builder has projects that violate common sense.',desc:'The kind where halfway through you stop asking "Will this work?" and start asking "Why is this working?" These are experiments built on curiosity, duct tape, Stack Overflow, documentation I definitely read (trust me), and a worrying amount of optimism.',bullets:['Systems held together by sheer determination.','Research ideas that started as "This is probably stupid..."','Code that would make senior developers visibly uncomfortable.','Business decisions that sounded terrible until they were not.','Mathematical models born from asking "What if everyone else is looking at the problem backwards?"'],lessons:'Disclaimer: No production systems were emotionally stable during development.',image:'assets/kavi-gussa.jpg',imageFit:'contain',poem:true,links:[]},
+  shouldnt:{icon:FOLDER_SVG,name:'Things That Definitely Shouldn\'t Have Worked',sub:'If this section gets audited, I\'m leaving the country.',quote:'Every builder has projects that violate common sense.',desc:'The kind where halfway through you stop asking "Will this work?" and start asking "Why is this working?" These are experiments built on curiosity, duct tape, Stack Overflow, documentation I definitely read (trust me), and a worrying amount of optimism.',bullets:['Systems held together by sheer determination.','Research ideas that started as "This is probably stupid..."','Code that would make senior developers visibly uncomfortable.','Business decisions that sounded terrible until they were not.','Mathematical models born from asking "What if everyone else is looking at the problem backwards?"'],lessons:'Disclaimer: No production systems were emotionally stable during development.',image:'assets/kavi-gussa.jpg',imageFit:'contain',poem:true,links:[]},
   experiments:{icon:FOLDER_SVG,name:'Experiments',sub:'digital laboratory, no roadmap included',quote:'Some people collect stamps. I collect half-finished theories, questionable prototypes, and ideas that spiral into entire research papers.',desc:'This is my digital laboratory. A place where curiosity has no roadmap and failure is treated as data. Every experiment starts with a simple question -- What happens if...? Sometimes the answer is a dead end. Occasionally, it becomes a company, a research paper, or a completely new field of exploration.',bullets:['Autonomous AI agents','Business operating systems','Pricing algorithms','Computational sociology','Cognitive architectures','Escrow-based governance','Distributed energy systems','IoT & embedded systems','Human decision models','Cosmology','Knowledge management','Mathematical modeling'],status:'[#######---] Curiosity      73%\n[##########] Caffeine      100%\n[#####-----] Sleep          12%\n[########--] New Ideas      84%\n[##--------] Free Time      Error: Not Found',lessons:'Every finished project was once an experiment everyone thought was unnecessary.',image:'assets/pavitra-paapi.jpg',imageFit:'contain',links:[]},
 };
 const osFiles=document.getElementById('os-files');
@@ -730,7 +729,7 @@ document.getElementById('modal-overlay').addEventListener('click',e=>{if(e.targe
 
 /* ================= RESEARCH LIST ================= */
 const research=[
- {key:'msg',n:'01',t:'MSG -- Message Memory Architecture',s:'Research-paper summary of AI memory as a graph-based coordination system.',source:'summaries/msg-memory-architecture.md'},
+ {key:'msg',n:'01',t:'MSG -- Mnemonic State Graph',s:'Research-paper summary of AI memory as a graph-based coordination system.',source:'summaries/msg-memory-architecture.md'},
  {key:'met',n:'02',t:'MET -- Commodity-Linked Settlement Framework',s:'Research-paper summary of commodity-linked settlement for distributed rooftop solar.',source:'summaries/met-solar-settlement.md'},
  {key:'uqcit',n:'03',t:'UQCIT + NQG-STF',s:'Research-paper summary of deterministic emergent cosmology with non-quantized gravity.',source:'summaries/uqcit-nqg-stf.md'},
  {key:'solar',n:'04',t:'Distributed Solar Infrastructure & Democratic Governance',s:'Research-paper summary of MVDC microgrids, MET settlement, and participatory governance.',source:'summaries/distributed-solar-democratic.md'},
@@ -789,7 +788,7 @@ function addMsgZenodoButton(){
   try{
     const m = document.getElementById('modal-content');
     if(!m) return;
-    if(!/MSG|Message Memory Architecture/i.test(m.textContent)) return;
+    if(!/MSG|Mnemonic State Graph/i.test(m.textContent)) return;
     if(m.querySelector('.zenodo-link')) return;
     const linkWrap = document.createElement('div');
     linkWrap.className = 'modal-links';
@@ -870,16 +869,17 @@ function printTerm(html,isCmd){
 }
 printTerm("agnel-os v1.0 -- type 'help' to begin.");
 const commands={
-  help:()=>"available: help, projects, coffee, entropy, 42, sudo, whoami, cat life.md, fortune, clear",
+  help:()=>"available: help, projects, coffee, entropy, 42, sudo, whoami, bilo, cat life.md, fortune, clear",
   projects:()=>"github  -  things-that-somehow-worked  -  things-that-shouldnt-have-worked  -  experiments -- research vault lives below.",
   coffee:()=>"brewing... done. caffeine levels: sufficient for one (1) more bad decision.",
   entropy:()=>"entropy always wins. I just try to lose slower than everyone else.",
   '42':()=>"correct answer. wrong question. try again in 7.5 million years.",
   sudo:()=>"nice try. this terminal has no root access, much like my sleep schedule.",
   whoami:()=>"a professional overthinker with a GitHub account and mild caffeine dependency.",
+  billo:()=>"Meow, what did u think was gonna happen? this is a terminal, not a magic 8-ball. try 'fortune' instead.",
   'cat life.md':()=>"# life.md\n\n- [x] pick a lane\n- [ ] ~~pick a lane~~ build a highway\n- [x] entropy wins eventually\n- [ ] be okay with that",
   fortune:()=>{
-    const f=["You will fix one bug and create three.","A senior engineer will ask 'why is it like this' and you will not have a good answer.","Your next great idea arrives at 2:47am. Write it down or lose it forever.","The meeting could have been a Markdown file. It was not."];
+    const f=["You will fix one bug and create three.","A senior engineer will ask 'why is it like this' and you won't have a good answer.","Your next great idea arrives at 2:47am. Write it down or lose it forever.","The meeting could have been a Markdown file. It was not.","Your code will compile. It will not work.","The universe ships to production daily. No staging environment. No rollback. Ship it anyway.","You will find a bug that was introduced by a fix for another bug. You will fix it and create three more.","You will discover that the most important part of your system is the part you never wrote.","Your next breakthrough comes from asking 'what if everyone else is looking at the problem backwards?'","You will realize that most meetings could have been a Markdown file. This one was not."];
     return f[Math.floor(Math.random()*f.length)];
   },
   clear:()=>{termLog.innerHTML='';return null;}

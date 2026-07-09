@@ -1,4 +1,4 @@
-# MSG: Message Memory Architecture
+# MSG: Mnemonic State Graph
 
 ## Abstract
 
