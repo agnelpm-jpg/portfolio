@@ -6,7 +6,7 @@
     <priority>1.0</priority>
   </url>
   <url>
-    <loc>https://agnel.machfold.in/papers/uqcit.html</loc>
+    <loc>https://agnel.machfold.in/papers/msg.html</loc>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
@@ -16,12 +16,12 @@
     <priority>0.8</priority>
   </url>
   <url>
-    <loc>https://agnel.machfold.in/papers/distributed-solar.html</loc>
+    <loc>https://agnel.machfold.in/papers/uqcit.html</loc>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
-    <loc>https://agnel.machfold.in/papers/msg.html</loc>
+    <loc>https://agnel.machfold.in/papers/distributed-solar.html</loc>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
@@ -29,5 +29,10 @@
     <loc>https://agnel.machfold.in/papers/valuscale.html</loc>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://agnel.machfold.in/thank-you/</loc>
+    <changefreq>yearly</changefreq>
+    <priority>0.3</priority>
   </url>
 </urlset>
