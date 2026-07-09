@@ -2,13 +2,21 @@ MET: A Commodity-Linked Settlement Framework for Distributed Urban Solar Deploym
 
 ## Abstract 
 
-Mumbai’s electricity supply is predominantly coal-based via the state grid, yielding stationary energy emissions of ~16.9 MtCO₂e (2019) within a total city emissions profile of ~24–26 MtCO₂e. The city’s rooftop solar potential is estimated at ~1.7–2.1 GW, yet deployment remains constrained by fragmented incentives, delayed municipal payments, and the absence of market mechanisms for household and commercial prosumers. This paper proposes MET (Mumbai Energy Token/Unit) as a commodity-linked settlement instrument backed by verified electricity output from distributed solar assets and coordinated via a Tripartite Escrow Settlement System. MET enables a financing and settlement pathway that accommodates distributed generation, retail prosumer participation, and wholesale hedging via regulated commodity markets. The work integrates (1) distributed solar infrastructure, (2) escrow-based settlement, and (3) commodity-linked coordination, within an incremental regulatory pathway aligned with existing SEBI, MCX, RBI and MERC frameworks. The paper is a conceptual policy-technical whitepaper, not an engineering feasibility or regulatory filing. 
+Mumbai’s electricity supply is predominantly coal-based via the state grid, yielding stationary energy emissions of ~16.9 MtCO₂e (2019) within a total city emissions profile of ~24–26 MtCO₂e. The city’s rooftop solar potential is estimated at ~1.7–2.1 GW, yet deployment remains constrained by fragmented incentives, delayed municipal payments, and the absence of market mechanisms for household and commercial prosumers. This paper proposes MET (Mumbai Energy Token/Unit) as a commodity-linked settlement instrument backed by verified electricity output from distributed solar assets and coordinated via a Tripartite Escrow Settlement System. MET enables a financing and settlement pathway that accommodates distributed generation, retail prosumer participation, and wholesale hedging via regulated commodity markets. The work integrates 
+(1) distributed solar infrastructure, 
+(2) escrow-based settlement, and 
+(3) commodity-linked coordination, within an incremental regulatory pathway aligned with existing SEBI, MCX, RBI and MERC frameworks. The paper is a conceptual policy-technical whitepaper, not an engineering feasibility or regulatory filing. 
 
 --- 
 
 ## 1. Introduction 
 
-Mumbai’s energy supply is coal-intensive and centralized. Distributed solar deployment remains below technical potential due to structural frictions spanning (1) capital formation, (2) payment assurance, (3) tariff rigidity, and (4) fragmented incentives. Traditional net-metering regimes do not produce meaningful prosumer participation at scale, nor do they enable municipal or district-level emission reduction pathways within the 2030-2050 climate targets outlined in MCAP and BMC climate budgeting frameworks. 
+Mumbai’s energy supply is coal-intensive and centralized. Distributed solar deployment remains below technical potential due to structural frictions spanning 
+(1) capital formation
+(2) payment assurance
+(3) tariff rigidity and 
+(4) fragmented incentives. 
+Traditional net-metering regimes do not produce meaningful prosumer participation at scale, nor do they enable municipal or district-level emission reduction pathways within the 2030-2050 climate targets outlined in MCAP and BMC climate budgeting frameworks. 
 
 The framework in this paper does not replace the grid; it adds a coordination and settlement layer to make distributed solar economically deployable. 
 
@@ -244,5 +252,5 @@ Reviewer model may fill with current literature:
 
 - CEA irradiance & load curve data 
 
-==================================================== 
+===
 

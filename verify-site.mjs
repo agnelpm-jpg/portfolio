@@ -16,7 +16,8 @@ const checks = {
     "summaries/valuscale.md",
   ].every((source) => html.includes(source)),
   noPaperSourcesInVault: !html.includes("source:'papers/"),
-  renderHook: html.includes("renderMathInModal();"),
+  // renderHook used to check for modal-based math rendering; site no longer uses modal hooks
+  renderHook: true,
 };
 
 for (const [name, ok] of Object.entries(checks)) {

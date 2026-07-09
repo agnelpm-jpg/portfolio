@@ -30,13 +30,30 @@ build/
 # Temporary files
 *.tmp
 *.swp
+*.bak
+*.orig
+*.rej
+/tmp/
+
+# Caching / build artifacts
+.cache/
+.parcel-cache/
+.sass-cache/
+.netlify/
+.vercel/
+.turbo/
 
 # Secrets
 *.pem
 *.key
 .env.local
+*.local
 
 # Misc
 coverage/
 coverage-report/
 *.sqlite
+*.zip
+*.tar.gz
+*.tgz
+*.map

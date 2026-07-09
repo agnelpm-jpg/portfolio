@@ -4,9 +4,11 @@ UQCIT + NQG-STF: A Deterministic Emergent Quantum Cosmology with Non-Quantized G
 
 ## Abstract 
 
-We propose a two-layer theoretical framework in which (i) dark energy and dark matter arise as a recoil-type residual field binding effect (RFBE) from early cosmological expansion, (ii) quantum mechanics emerges as deterministic perturbative behavior of continuous spacetime fabric (STF) without quantization of geometry, (iii) singularities are replaced by a sealed meta-singularity (MS) domain governed by a quantum singularity structural limit (QSSL), and (iv) cosmic cycles close without entropy reset through an 
-
-entropic-causal/perpetual time decomposition. The model preserves General Relativity (GR) at the geometric level, demotes quantum probability to coarse-grained instability outcomes, and reinterprets Λ as a dynamic tension term coupled to STF and RFBE. Black hole information is absorbed into MS under deterministic collapse, and universal re-expansion occurs via an STF tear event (UEO). We outline mathematical objects, boundary conditions, compatibility with current observations, and falsification paths. 
+We propose a two-layer theoretical framework in which 
+(i) dark energy and dark matter arise as a recoil-type residual field binding effect (RFBE) from early cosmological expansion,
+(ii) quantum mechanics emerges as deterministic perturbative behavior of continuous spacetime fabric (STF) without quantization of geometry, (iii) singularities are replaced by a sealed meta-singularity (MS) domain governed by a quantum singularity structural limit (QSSL), and (iv) cosmic cycles close without entropy reset through an 
+entropic-causal/perpetual time decomposition.
+The model preserves General Relativity (GR) at the geometric level, demotes quantum probability to coarse-grained instability outcomes, and reinterprets Λ as a dynamic tension term coupled to STF and RFBE. Black hole information is absorbed into MS under deterministic collapse, and universal re-expansion occurs via an STF tear event (UEO). We outline mathematical objects, boundary conditions, compatibility with current observations, and falsification paths. 
 
 --- 
 
@@ -92,11 +94,15 @@ Spin–entropy coupling holds during τ_c. Kerr BH spin decay increases entropy 
 
 ## 11. Mathematical Objects (Skeleton) 
 
-Manifold: STF tension field: RFBE functional: Time modes: Boundary sets: MS, QSSL, UEO Action sketch: 
+Manifold: STF tension field. RFBE functional: time modes. Boundary sets: MS, QSSL, UEO.
 
-S=\int\left[\mathcal{R}(g)+\mathcal{F}_{\text{STF}}(g,\partial 
+Action sketch:
 
-g)+\mathcal{D}_{\text{RFBE}}(a,\dot{a})+\Lambda_{\text{dyn}}(g,\mathcal{T}_{\text{STF}})\rig ht]\sqrt{-g}d^4x 
+$$
+S = \int \left[ \mathcal{R}(g) + \mathcal{F}_{\mathrm{STF}}(g, \partial g)
+    + \mathcal{D}_{\mathrm{RFBE}}(a, \dot{a})
+    + \Lambda_{\mathrm{dyn}}(g, \mathcal{T}_{\mathrm{STF}}) \right] \sqrt{-g}\, d^4x
+$$
 
 --- 
 
