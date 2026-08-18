@@ -48,4 +48,7 @@ document.addEventListener('click',e=>{if(e.target && e.target.id==='copyBib'){co
 document.body.insertAdjacentHTML('beforeend','<button id="scrollTopBtn" class="scroll-top" aria-label="Scroll to top">↑ Top</button>');
 const _btn=document.getElementById('scrollTopBtn');window.addEventListener('scroll',()=>{if(document.documentElement.scrollTop>400||document.body.scrollTop>400)_btn.style.display='block';else _btn.style.display='none'});_btn.addEventListener('click',()=>window.scrollTo({top:0,behavior:'smooth'}));
 </script>
+<!-- Cloudflare Web Analytics -->
+<script type="module" src="https://static.cloudflareinsights.com/beacon.min.js" data-cf-beacon='{"token": "ce588d3079a24223a84341d79ea37358"}'></script>
+<!-- End Cloudflare Web Analytics -->
 </body></html>

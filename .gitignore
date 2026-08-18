@@ -17,6 +17,7 @@ venv/
 # Editors and OS
 .vscode/
 .idea/
+.claudeignore
 .DS_Store
 Thumbs.db
 

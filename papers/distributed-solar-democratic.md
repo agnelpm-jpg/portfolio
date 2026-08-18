@@ -1,10 +1,3 @@
-## Distributed Solar Infrastructure and Democratic Governance
-
-### A compact Mumbai energy framework
-
-Author: Agnel Suresh  
-Status: Short-form research note
-
 ## Executive Summary
 
 Mumbai can meet its urban energy needs through distributed rooftop solar, MVDC transmission, and a commodity-backed settlement layer governed by a democratic coordination council.
@@ -48,21 +41,6 @@ Accountability:
 - Quarterly technical review
 - Public dashboards
 - Grievance and transparency process
-
-## Mathematical Objects (Skeleton)
-
-Manifold: STF tension field  
-RFBE functional: time modes  
-Boundary sets: MS, QSSL, UEO
-
-Action sketch:
-
-\[ 
-S = \int \left[\mathcal{R}(g) + \mathcal{F}_{\mathrm{STF}}(g, \partial g)
-    + \mathcal{D}_{\mathrm{RFBE}}(a, \dot{a})
-    + \Lambda_{\mathrm{dyn}}(g, \mathcal{T}_{\mathrm{STF}}) \right]
-    \sqrt{-g} \, d^4x.
-\]
 
 ## Risk and Mitigation
 

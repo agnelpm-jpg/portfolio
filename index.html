@@ -32,7 +32,6 @@
 
 <!-- Favicon -->
 <link rel="icon" href="/favicon.ico" sizes="any">
-<link rel="icon" href="/favicon.svg" type="image/svg+xml">
 <link rel="apple-touch-icon" href="/apple-touch-icon.png">
 
 <!-- Structured data: you, as a Person -->
@@ -75,19 +74,6 @@
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500;600;700&family=Inter:wght@400;500;600&family=JetBrains+Mono:wght@400;500;700&display=swap" rel="stylesheet">
-<script>
-window.MathJax = {
-  tex: {
-    inlineMath: [['\\(', '\\)'], ['$', '$']],
-    displayMath: [['\\[', '\\]'], ['$$', '$$']],
-    processEscapes: true,
-    tags: 'ams'
-  },
-  options: { skipHtmlTags: ['script','noscript','style','textarea','pre'] },
-  svg: { fontCache: 'global' }
-};
-</script>
-<script defer src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-svg.js"></script>
 <style>
 /* ============ TOKENS ============ */
 :root{
@@ -179,7 +165,13 @@ nav .links{display:flex;gap:24px;color:var(--ink-dim);}
 nav .links a{transition:color .2s;}
 nav .links a:hover{color:var(--ember);}
 #knowledge{position:fixed;top:0;left:0;height:2px;background:var(--ember);z-index:600;width:0%;}
-@media(max-width:760px){nav .links{display:none;}}
+#nav-toggle{display:none;background:none;border:1px solid var(--line-strong);color:var(--ink);width:36px;height:32px;border-radius:6px;cursor:pointer;font-family:var(--mono);font-size:14px;}
+@media(max-width:760px){
+  #nav-toggle{display:block;}
+  nav .links{display:none;position:fixed;top:65px;left:0;right:0;flex-direction:column;gap:0;background:rgba(10,9,12,0.97);backdrop-filter:blur(10px);border-bottom:1px solid var(--line);padding:8px 32px 18px;}
+  nav .links.open{display:flex;}
+  nav .links a{padding:14px 0;border-bottom:1px solid var(--line);}
+}
 
 /* ============ LANDING ============ */
 #landing{
@@ -252,7 +244,8 @@ h1 .grad{color:var(--ember);}
 #poly p{color:var(--ink-dim);font-size:16px;line-height:1.7;margin-bottom:16px;}
 #poly svg{width:100%;height:auto;overflow:visible;}
 .node-circle{fill:var(--panel-2);stroke:var(--line-strong);stroke-width:1.5;transition:all .25s;cursor:pointer;}
-.node-circle:hover, .node-circle.active{fill:var(--ember);stroke:var(--ember);}
+.node-circle:hover, .node-circle.active, .node-circle:focus-visible{fill:var(--ember);stroke:var(--ember);}
+.node-circle:focus-visible{outline:2px solid var(--ember);outline-offset:3px;}
 .node-label{font-family:var(--mono);font-size:11px;fill:var(--ink-dim);pointer-events:none;transition:fill .25s;text-anchor:middle;}
 .node-label.active{fill:var(--ink);}
 .edge{stroke:var(--line-strong);stroke-width:1;transition:stroke .25s,stroke-width .25s;}
@@ -271,6 +264,7 @@ h1 .grad{color:var(--ember);}
 .os-body{padding:36px;display:grid;grid-template-columns:repeat(auto-fill,minmax(148px,1fr));gap:26px;}
 .file{text-align:center;cursor:pointer;padding:14px 8px;border-radius:10px;transition:background .2s,transform .2s;}
 .file:hover{background:rgba(255,255,255,.04);transform:translateY(-4px);}
+.file:focus-visible{outline:2px solid var(--ember);outline-offset:2px;background:rgba(255,255,255,.04);}
 .file .icon{font-size:34px;margin-bottom:10px;}
 .file .fname{font-family:var(--mono);font-size:12px;color:var(--ink-dim);line-height:1.4;}
 
@@ -300,22 +294,7 @@ h1 .grad{color:var(--ember);}
   transition:all .2s;
 }
 .modal-links a:hover{border-color:var(--ember);color:var(--ember);}
-.modal.reader{max-width:min(1080px,94vw);padding:0;overflow:hidden;}
-.reader-head{position:sticky;top:0;background:rgba(19,18,24,.96);backdrop-filter:blur(12px);border-bottom:1px solid var(--line);padding:34px 40px 26px;z-index:2;}
-.reader-head .modal-close{top:26px;right:28px;}
-.reader-body{max-height:64vh;overflow:auto;padding:34px 40px 42px;}
-.vault-note,.collab-cta,.folder-poem,.secret-box{border:1px solid var(--line-strong);background:var(--panel-2);padding:18px;border-radius:10px;margin:22px 0;color:var(--ink-dim);font-family:var(--mono);font-size:12.5px;line-height:1.7;}
-.vault-note{border-color:rgba(255,138,61,.35);color:var(--ember);}
-.collab-cta strong{font-family:var(--disp);font-size:18px;color:var(--ink);display:block;margin-bottom:8px;}
-.paper-content{color:var(--ink-dim);font-size:15px;line-height:1.76;}
-.paper-content h1,.paper-content h2,.paper-content h3{font-family:var(--disp);color:var(--ink);line-height:1.16;margin:28px 0 12px;}
-.paper-content h1{font-size:30px;}.paper-content h2{font-size:24px;}.paper-content h3{font-size:19px;}
-.paper-content p{margin:0 0 14px;}.paper-content ul{padding-left:22px;margin:0 0 16px;}
-.paper-content li{margin-bottom:8px;}.paper-content hr{border:0;border-top:1px solid var(--line);margin:28px 0;}
-.paper-content pre{overflow:auto;background:#0c0b10;border:1px solid var(--line);border-radius:8px;padding:14px;margin:16px 0;color:var(--ink);}
-.paper-content code{font-family:var(--mono);font-size:.92em;color:var(--ink);}
-.paper-content mjx-container{margin:18px 0;color:var(--ink);}
-.paper-content .MathJax{color:var(--ink);}
+.folder-poem,.secret-box{border:1px solid var(--line-strong);background:var(--panel-2);padding:18px;border-radius:10px;margin:22px 0;color:var(--ink-dim);font-family:var(--mono);font-size:12.5px;line-height:1.7;}
 .modal-asset{width:100%;max-height:280px;object-fit:cover;border:1px solid var(--line);border-radius:10px;margin:8px 0 18px;filter:contrast(1.04) saturate(.92);}
 .modal-asset.contain{object-fit:contain;background:#0c0b10;}
 .modal-section blockquote{border-left:2px solid var(--ember);padding-left:14px;color:var(--ink);font-family:var(--disp);font-size:18px;line-height:1.45;margin-bottom:18px;}
@@ -430,7 +409,7 @@ footer b{color:var(--ember);cursor:pointer;}
 
 <nav>
   <div class="logo" onclick="window.scrollTo({top:0,behavior:'smooth'})">AGNEL<span>.</span></div>
-  <div class="links">
+  <div class="links" id="nav-links">
     <a href="#journey">journey</a>
     <a href="#poly">polymathy</a>
     <a href="#work">work</a>
@@ -438,6 +417,7 @@ footer b{color:var(--ember);cursor:pointer;}
     <a href="#thoughts">thoughts</a>
     <a href="#contact">contact</a>
   </div>
+  <button id="nav-toggle" aria-label="Toggle navigation" aria-expanded="false" aria-controls="nav-links">☰</button>
 </nav>
 
 <!-- LANDING -->
@@ -632,6 +612,17 @@ async function handleContactSubmit(event){
   alert('Submission failed. Please email agnelpm@gmail.com directly instead.');
 }
 
+/* ================= MOBILE NAV ================= */
+const navToggle=document.getElementById('nav-toggle');
+const navLinks=document.getElementById('nav-links');
+function closeNav(){navLinks.classList.remove('open');navToggle.setAttribute('aria-expanded','false');navToggle.textContent='☰';}
+navToggle.addEventListener('click',()=>{
+  const open=navLinks.classList.toggle('open');
+  navToggle.setAttribute('aria-expanded',String(open));
+  navToggle.textContent=open?'✕':'☰';
+});
+navLinks.querySelectorAll('a').forEach(a=>a.addEventListener('click',closeNav));
+
 /* ================= CURSOR ================= */
 const cursor=document.getElementById('cursor');
 document.addEventListener('mousemove',e=>{
@@ -772,6 +763,7 @@ nodes.forEach(n=>{
   const c=document.createElementNS('http://www.w3.org/2000/svg','circle');
   c.setAttribute('cx',n.x);c.setAttribute('cy',n.y);c.setAttribute('r',30);
   c.classList.add('node-circle');c.dataset.id=n.id;
+  c.setAttribute('tabindex','0');c.setAttribute('role','button');c.setAttribute('aria-label',n.label);
   const t=document.createElementNS('http://www.w3.org/2000/svg','text');
   t.setAttribute('x',n.x);t.setAttribute('y',n.y+46);
   t.classList.add('node-label');t.dataset.id=n.id;t.textContent=n.label;
@@ -780,6 +772,9 @@ nodes.forEach(n=>{
   c.addEventListener('mouseenter',()=>highlightNode(n.id));
   c.addEventListener('mouseleave',()=>clearHighlight());
   c.addEventListener('click',()=>highlightNode(n.id));
+  c.addEventListener('focus',()=>highlightNode(n.id));
+  c.addEventListener('blur',()=>clearHighlight());
+  c.addEventListener('keydown',e=>{if(e.key==='Enter'||e.key===' '){e.preventDefault();highlightNode(n.id);}});
 });
 function highlightNode(id){
   clearHighlight();
@@ -812,8 +807,10 @@ Object.keys(projects).forEach(key=>{
   const p=projects[key];
   const d=document.createElement('div');
   d.className='file reveal';
-  d.innerHTML=`<div class="icon">${p.icon}</div><div class="fname">${p.name}</div>`;
+  d.setAttribute('tabindex','0');d.setAttribute('role','button');d.setAttribute('aria-label',`Open ${p.name}`);
+  d.innerHTML=`<div class="icon">${p.icon}</div><div class="fname">${escapeHTML(p.name)}</div>`;
   d.addEventListener('click',()=>openModal(key));
+  d.addEventListener('keydown',e=>{if(e.key==='Enter'||e.key===' '){e.preventDefault();openModal(key);}});
   osFiles.appendChild(d);
 });
 const folderClicks={};
@@ -827,25 +824,33 @@ function openModal(key){
   const poem=p.poem?`<div class="folder-poem">"99 little bugs in the code,<br>99 little bugs.<br>Take one down,<br>patch it around,<br>127 little bugs in the code."</div>`:'';
   m.className='modal';
   m.innerHTML=`
-    <button class="modal-close" onclick="closeModal()">x</button>
-    <h3>${p.name}</h3>
-    <div class="modal-sub">${p.sub}</div>
-    ${p.image?`<img class="modal-asset ${p.imageFit==='contain'?'contain':''}" src="${p.image}" alt="${p.name}">`:''}
+    <button class="modal-close" onclick="closeModal()" aria-label="Close">x</button>
+    <h3>${escapeHTML(p.name)}</h3>
+    <div class="modal-sub">${escapeHTML(p.sub)}</div>
+    ${p.image?`<img class="modal-asset ${p.imageFit==='contain'?'contain':''}" src="${p.image}" alt="${escapeHTML(p.name)}">`:''}
     ${p.quote?`<div class="modal-section"><blockquote>${escapeHTML(p.quote)}</blockquote></div>`:''}
-    ${p.desc?`<div class="modal-section"><h4>Description</h4><p>${p.desc}</p></div>`:''}
+    ${p.desc?`<div class="modal-section"><h4>Description</h4><p>${escapeHTML(p.desc)}</p></div>`:''}
     ${bullets}
-    ${p.status?`<div class="modal-section"><h4>Current Status</h4><div class="status-bars">${p.status}</div></div>`:''}
-    ${p.stack?`<div class="modal-section"><h4>Stack / Domains</h4><p>${p.stack}</p></div>`:''}
-    ${p.reason?`<div class="modal-section"><h4>Why it exists</h4><p>${p.reason}</p></div>`:''}
-    ${p.lessons?`<div class="modal-section"><h4>Notes</h4><p>${p.lessons}</p></div>`:''}
+    ${p.status?`<div class="modal-section"><h4>Current Status</h4><div class="status-bars">${escapeHTML(p.status)}</div></div>`:''}
+    ${p.stack?`<div class="modal-section"><h4>Stack / Domains</h4><p>${escapeHTML(p.stack)}</p></div>`:''}
+    ${p.reason?`<div class="modal-section"><h4>Why it exists</h4><p>${escapeHTML(p.reason)}</p></div>`:''}
+    ${p.lessons?`<div class="modal-section"><h4>Notes</h4><p>${escapeHTML(p.lessons)}</p></div>`:''}
     ${poem}
     ${secret}
     <div class="modal-links">${(p.links||[]).map(l=>`<a href="${l.u}" target="_blank" rel="noopener">${l.l} -></a>`).join('')}</div>
   `;
   document.getElementById('modal-overlay').classList.add('show');
+  m.querySelector('.modal-close').focus();
 }
 function closeModal(){document.getElementById('modal-overlay').classList.remove('show');}
 document.getElementById('modal-overlay').addEventListener('click',e=>{if(e.target.id==='modal-overlay')closeModal();});
+document.addEventListener('keydown',e=>{
+  if(e.key!=='Escape')return;
+  if(document.getElementById('modal-overlay').classList.contains('show'))closeModal();
+  else if(terminal.classList.contains('show'))toggleTerminal();
+  else if(document.getElementById('egg-overlay').classList.contains('show'))document.getElementById('egg-overlay').classList.remove('show');
+  else if(navLinks.classList.contains('open'))closeNav();
+});
 
 /* ================= RESEARCH LIST ================= */
 const research=[
@@ -949,6 +954,9 @@ document.querySelector('.logo').addEventListener('dblclick',()=>{
 armReveal();
 document.querySelectorAll('.tl-item,.research-row,.file,.note').forEach(el=>{el.classList.add('reveal');io.observe(el);});
 </script>
+<!-- Cloudflare Web Analytics -->
+<script type="module" src="https://static.cloudflareinsights.com/beacon.min.js" data-cf-beacon='{"token": "ce588d3079a24223a84341d79ea37358"}'></script>
+<!-- End Cloudflare Web Analytics -->
 </body>
 </html>
 
